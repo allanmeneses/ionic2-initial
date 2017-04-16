@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {ConnectionService} from '../providers/connection-service';
 
 import { HomePage } from '../pages/home/home';
 import { MenuTeste } from '../pages/menu-teste/menu-teste';
@@ -37,4 +38,5 @@ export class MyApp {
     this.rootPage = page.component;
     this.menuCtrl.close(menuSide);
   }
+
 }

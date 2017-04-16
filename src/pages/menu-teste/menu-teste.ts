@@ -1,24 +1,32 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ConnectionService} from '../../providers/connection-service';
 
-/**
- * Generated class for the MenuTeste page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-menu-teste',
   templateUrl: 'menu-teste.html',
+  providers: [ConnectionService]
 })
 export class MenuTeste {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private connectionService: ConnectionService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MenuTeste');
   }
 
+  buscarCEP(): void{
+    this.connectionService.getCep('74610230')
+    .then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    }) ;
+  }
 }
