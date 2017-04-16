@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ConnectionService} from '../../providers/connection-service';
 
-
 @IonicPage()
 @Component({
   selector: 'page-menu-teste',
@@ -14,7 +13,8 @@ export class MenuTeste {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    private connectionService: ConnectionService) {
+    private connectionService: ConnectionService,
+    public pipesssdf:ConnectionService) {
   }
 
   ionViewDidLoad() {

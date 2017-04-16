@@ -6,16 +6,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import {ConnectionService} from '../providers/connection-service';
 import { HttpModule } from '@angular/http';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { Pipe, PipeTransform } from '@angular/core';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MenuTeste } from '../pages/menu-teste/menu-teste';
+import { AlertPage } from '../pages/alert/alert';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MenuTeste
+    MenuTeste,
+    AlertPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { MenuTeste } from '../pages/menu-teste/menu-teste';
   entryComponents: [
     MyApp,
     HomePage,
-    MenuTeste
+    MenuTeste,
+    AlertPage
   ],
   providers: [
     StatusBar,

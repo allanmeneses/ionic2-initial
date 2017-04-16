@@ -6,6 +6,7 @@ import {ConnectionService} from '../providers/connection-service';
 
 import { HomePage } from '../pages/home/home';
 import { MenuTeste } from '../pages/menu-teste/menu-teste';
+import { AlertPage } from '../pages/alert/alert';
 @Component({
   templateUrl: 'app.html'
 })
@@ -21,7 +22,8 @@ export class MyApp {
 
     this.pages= [
       {component:HomePage, title: 'Home', icon:'home'},
-      {component:MenuTeste, title: 'Menu Teste', icon:'menu'}
+      {component:MenuTeste, title: 'Menu Teste', icon:'menu'},
+      {component:AlertPage, title: 'Alert page', icon:'alert'},
     ];
 
     
